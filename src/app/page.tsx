@@ -1,3 +1,10 @@
+import { Nav } from "@/components/navbar";
+import { Toaster } from "sonner";
 export default function HomePage() {
-  return <></>;
+  return (
+    <>
+      <Toaster richColors />
+      <Nav />
+    </>
+  );
 }

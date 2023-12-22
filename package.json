@@ -12,9 +12,12 @@
     "@nextui-org/react": "^2.2.9",
     "@t3-oss/env-nextjs": "^0.7.0",
     "framer-motion": "^10.16.5",
+    "html2canvas": "^1.4.1",
     "next": "^14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-qr-code": "^2.0.12",
+    "sonner": "^1.2.4",
     "zod": "^3.22.4"
   },
   "devDependencies": {
