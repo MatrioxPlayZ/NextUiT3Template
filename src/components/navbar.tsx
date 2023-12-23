@@ -1,24 +1,13 @@
 "use client";
-import {
-  Button,
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-} from "@nextui-org/react";
-import Link from "next/link";
+import { Navbar, NavbarBrand } from "@nextui-org/react";
 export const Nav = () => {
   return (
     <>
       <Navbar isBlurred isBordered>
-        <NavbarBrand className="font-extrabold">Tasks By Shaharyar</NavbarBrand>
-        <NavbarContent>
-          <NavbarItem>
-            <Button color="primary" variant="flat">
-              <Link href={"/"}>Home</Link>
-            </Button>
-          </NavbarItem>
-        </NavbarContent>
+        <NavbarBrand className="justify-center text-xl font-extrabold sm:text-2xl">
+          Tasks By{" "}
+          <span className="text-2xl text-primary-600">&nbsp;Shaharyar</span>
+        </NavbarBrand>
       </Navbar>
     </>
   );

@@ -1,10 +1,10 @@
 import { Nav } from "@/components/navbar";
-import { Toaster } from "sonner";
+import Tasks from "@/components/tasks";
 export default function HomePage() {
   return (
     <>
-      <Toaster richColors />
       <Nav />
+      <Tasks />
     </>
   );
 }

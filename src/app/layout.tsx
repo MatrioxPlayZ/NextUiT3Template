@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 
 import { Providers } from "./providers";
 
+import { Toaster } from "sonner";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -23,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`font-sans ${inter.variable}`}>
+        <Toaster richColors />
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -1,6 +1,5 @@
 "use client";
 import { Button, Textarea } from "@nextui-org/react";
-import { Toaster } from "sonner";
 import { triggerToast } from "@/libs/utils";
 import { useState } from "react";
 import html2canvas from "html2canvas";
@@ -25,11 +24,11 @@ export default function QrCodeGenerator() {
   };
   const handleSubmit = async () => {
     await takeScreenshot();
-    triggerToast("Copied To Clipboard", "success");
+    if (text.length !== 0) triggerToast("Copied To Clipboard", "success");
+    else triggerToast("Please Enter Some Text", "error");
   };
   return (
     <>
-      <Toaster richColors />
       <div
         id="component"
         className={`fixed left-1/2 top-2/3 mx-auto aspect-square -translate-x-1/2 -translate-y-1/2 rounded-xl border-b-3 border-r-3 border-default-500 p-2 transition-all ${
@@ -38,7 +37,7 @@ export default function QrCodeGenerator() {
       >
         <QRCode value={text} viewBox={`0 0 256 256`} />
       </div>
-      <div className="mx-auto mt-12 flex max-w-max flex-col justify-center">
+      <div className="mx-auto mt-12 flex max-w-max scale-110 flex-col justify-center">
         <Textarea
           className="rounded-t-xl border-2"
           variant="underlined"
